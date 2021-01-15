@@ -33,7 +33,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="16dp"
                 android:text="Name"
-                android:textSize="20sp"
+                android:textSize="18sp"
 
                 android:layout_marginLeft="20dp" />
             <TextView
@@ -43,7 +43,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="24dp"
                 android:text="Age"
-                android:textSize="20sp"
+                android:textSize="18sp"
 
                 android:layout_marginLeft="20dp" />
             <TextView
@@ -53,7 +53,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="24dp"
                 android:text="Address"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:layout_marginLeft="20dp" />
 
         </LinearLayout>
@@ -77,13 +77,14 @@
                 android:layout_marginTop="70sp"
                 android:hint="gender"
                 android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
 
         </LinearLayout>
 
 
     </LinearLayout>
+
 
 
 

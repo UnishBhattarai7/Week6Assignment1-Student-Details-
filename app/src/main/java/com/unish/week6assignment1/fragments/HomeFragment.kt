@@ -15,8 +15,9 @@ import com.unish.week6assignment1.model.Student
 import com.unish.week6assignment1.model.StudentList
 
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), View.OnClickListener {
     private lateinit var recyclerView: RecyclerView
+    private lateinit var refresh : ImageView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,22 +25,30 @@ class HomeFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         recyclerView = view.findViewById(R.id.recyclerView)
+        refresh  = view.findViewById(R.id.refresh)
 
         val adapter = StudentAdapter(StudentList.fetchStudent(),this)
         recyclerView.layoutManager = LinearLayoutManager(context!!)
         recyclerView.adapter = adapter
 
 
+        refresh.setOnClickListener(this)
+
 
         return view
 
+    }
 
-
-
+    override fun onClick(v: View?) {
+        when(v?.id){
+            R.id.refresh-> {
+                recyclerView.adapter?.notifyDataSetChanged()
+            }
+        }
     }
 
 
-    }
+}
 
 
 
